@@ -55,6 +55,8 @@ public class s2 : MonoBehaviour
         if (showChoices == true)
         {
             choicesPanel.SetActive(true);
+            showChoices = false;
+            currentLine++;
         }
     }
 
@@ -66,5 +68,14 @@ public class s2 : MonoBehaviour
         int cNumber = int.Parse(tmp[0]);
         textName.text = names[cNumber];
         if (currentLine == 0) textDisplay.text = tmp[1];
+    }
+
+    public void Ans1()
+    {
+        choicesPanel.SetActive(false);
+    }
+    public void Ans2()
+    {
+        choicesPanel.SetActive(false);
     }
 }
